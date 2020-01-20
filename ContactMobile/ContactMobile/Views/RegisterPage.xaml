@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:viewModels="clr-namespace:ContactMobile.ViewModels;assembly=ContactMobile"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ContactMobile.Views.RegisterPage">
+    
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Center"
+                 Spacing="20"
+                 Padding="20">
+        <Entry Text="{Binding Username}"
+               Placeholder="email as username" />
+        <Entry Text="{Binding Password}" 
+               Placeholder="password"
+               IsPassword="True" />
+        <Entry Text="{Binding ConfirmPassword}"
+               Placeholder="confirm password"
+               IsPassword="True" />
+        <Button Command="{Binding RegisterCommand}" 
+                Text="Register"
+                TextColor="White"
+                FontSize="20"
+                BackgroundColor="DeepPink" />
+        <Label Text="{Binding Message}"
+               HorizontalOptions="Center"/>
+        <Button Command="{Binding OpenLoginCommand}" 
+                Text="Login"
+                TextColor="White"
+                FontSize="20"
+                BackgroundColor="DeepPink" />
+    </StackLayout>
+</ContentPage>

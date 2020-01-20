@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ContactMobile.Views.EditContactPage"
+             Title="Edit Contact">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Firstname" FontSize="Medium" />
+            <Entry Text="{Binding Contact.FirstName, Mode=TwoWay}" d:Text="Firstname" FontSize="Small" />
+            <Label Text="Lastname" FontSize="Medium" />
+            <Entry Text="{Binding Contact.LastName, Mode=TwoWay}" d:Text="Lastname" FontSize="Small"/>
+            <Label Text="Mobile No." FontSize="Medium" />
+            <Entry Text="{Binding Contact.MobileNo, Mode=TwoWay}" d:Text="MobileNo" FontSize="Small"/>
+            <Label Text="Email Address" FontSize="Medium" />
+            <Entry Text="{Binding Contact.EmailAddress, Mode=TwoWay}" d:Text="Email Address" FontSize="Small"/>
+            <Label Text="Address" FontSize="Medium" />
+            <Entry Text="{Binding Contact.Address, Mode=TwoWay}" d:Text="Address" FontSize="Small"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
