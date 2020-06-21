@@ -1,6 +1,5 @@
 ﻿using ContactMobile.Models;
 using ContactMobile.ViewModels;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

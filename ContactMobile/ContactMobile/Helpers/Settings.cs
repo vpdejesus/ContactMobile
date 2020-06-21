@@ -11,13 +11,7 @@ namespace ContactMobile.Helpers
     /// </summary>
     public static class Settings
     {
-        private static ISettings AppSettings
-        {
-            get
-            {
-                return CrossSettings.Current;
-            }
-        }
+        private static ISettings AppSettings => CrossSettings.Current;
 
         public static string Username
         {

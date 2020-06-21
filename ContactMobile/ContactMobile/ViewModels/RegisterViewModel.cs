@@ -44,14 +44,7 @@ namespace ContactMobile.ViewModels
                         Settings.Username = Username;
                         Settings.Password = Password;
 
-                        if (result.Successful)
-                        {
-                            Message = "Registration successful!";
-                        }
-                        else
-                        {
-                            Message = "Registration unsuccessful! Try again.";
-                        }
+                        Message = result.Successful ? "Registration successful!" : "Registration unsuccessful! Try again.";
                     }
                 });
             }
